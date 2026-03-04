@@ -1,0 +1,89 @@
+<html>
+
+<head>
+<title>Used Car Price Predictor</title>
+
+<style>
+
+body{
+background-image: url("/static/bg1.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+font-family: Arial;
+}
+
+.container{
+width:420px;
+margin:auto;
+margin-top:80px;
+background: rgba(255,255,255,0.9);
+padding:30px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 0 15px rgba(0,0,0,0.3);
+}
+
+input,select{
+width:90%;
+padding:10px;
+margin:10px;
+border-radius:5px;
+border:1px solid gray;
+}
+
+button{
+background:#4CAF50;
+color:white;
+padding:10px 20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-size:16px;
+}
+
+button:hover{
+background:#45a049;
+}
+
+.result{
+color:green;
+font-size:20px;
+margin-top:15px;
+font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>🚗 Used Car Price Predictor</h2>
+
+<form method="POST">
+
+<select name="brand">
+<option>Maruti</option>
+<option>Tata</option>
+<option>Mahindra</option>
+</select>
+
+<input type="number" name="age" placeholder="Car Age (Years)" required>
+
+<input type="number" name="kms" placeholder="Kilometers Driven" required>
+
+<button type="submit">Predict Price</button>
+
+</form>
+
+<div class="result">
+Predicted Price: ₹ {{price}}
+</div>
+
+</div>
+
+</body>
+</html>
